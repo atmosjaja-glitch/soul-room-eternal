@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0a0a1a, #000);
+  font-family: 'Arial', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.room {
+  text-align: center;
+}
+
+.frame {
+  display: inline-block;
+  padding: 12px;
+  border: 3px solid #00f0ff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00f0ff;
+  animation: glow 2s infinite alternate;
+}
+
+.framed-img {
+  max-width: 320px;
+  border-radius: 8px;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #00f0ff; }
+  to { box-shadow: 0 0 25px #00f0ff; }
+}
+
+.fade-text {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-text.show {
+  opacity: 1;
+}
+
+.delay1 {
+  animation: fadeIn 3s forwards;
+  animation-delay: 2s;
+}
+
+.delay2 {
+  animation: fadeIn 3s forwards;
+  animation-delay: 4s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
